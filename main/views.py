@@ -7,7 +7,10 @@ from django.shortcuts import get_object_or_404
 
 def for_all_category(request):
     categories = Category.objects.all()
-    return {'categories':categories}
+    context = {
+        'categories':categories,
+    }
+    return context
 
 
 

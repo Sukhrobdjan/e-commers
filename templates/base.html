@@ -85,18 +85,19 @@
 
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <!-- <li><hr class="dropdown-divider"></li> -->
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                                <li><a class="dropdown-item" href="{% url 'password_change' %}">Password_change</a></li>
 
                             </ul>
                             {% else %}
-
+                            <a href="{% url 'login' %}">
                             <button type="button" class="btn btn-outline-primary">
                                 <svg id="i-signin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                 <path d="M3 16 L23 16 M15 8 L23 16 15 24 M21 4 L29 4 29 28 21 28" />
-                            </svg>Sign-In</button>
-                            <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20x" fill="currentColor" class="bi bi-door-closed-fill" viewBox="0 0 16 16">
+                            </svg>Sign-In</button></a>
+                            <a href="{% url 'users:signup' %}"><button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20x" fill="currentColor" class="bi bi-door-closed-fill" viewBox="0 0 16 16">
                                 <path d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1h8zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                              </svg>Sign-up</button>
+                              </svg>Sign-up</button></a>
                             {% endif %}
 
                         </li>
@@ -113,6 +114,8 @@
         </div>
         <div class="col-8">
             {% block context %}
+
+            <!-- <h1>Base</h1> -->
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
                 integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
                 crossorigin="anonymous"></script>

@@ -3,7 +3,7 @@ from .views import IndexView, CategoyrView
 from django.urls import path
 
 
-app_name = 'main' # main:index
+app_name = 'main'
 
 
 urlpatterns = [
